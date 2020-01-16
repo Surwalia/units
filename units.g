@@ -15,6 +15,7 @@ i2:=Embedding(F,FG);;
 
 q:=PrimitiveElement(F);;
 # the generator of the cyclic group $F^{*}$
+# for justification see Lemma 1 in https://doi.org/10.1142/S1793557120500217
 r:=(q^((Size(F) - 1)));;
 z:=q^((Size(F)-1)/2);;
 s:=r+r ;;
