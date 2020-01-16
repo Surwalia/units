@@ -1,7 +1,7 @@
 # Generator of normalized unit group of group algebra $FC_2$
 
 OrderNormalizedUnitGroup:=function(p,n)
-local f,g,m,fg,e,q,i1,i2,r,z,s,j,w,v;
+local F,G,m,FG,e,q,i1,i2,r,z,s,j,w,v;
 
 # Group ring of cyclic group of order 2 over a finite field with p^n elements
 F:=GF(p^n);;
