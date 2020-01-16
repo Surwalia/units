@@ -16,4 +16,3 @@ w:= (j)^i2 + ((e + (z*j)^(i2))*(m[1]^i1) );;
 v:=Order(w);
 return v;
 end;
-OrderNormalizedUnitGroup(5,2);
