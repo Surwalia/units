@@ -1,18 +1,31 @@
+# Generator of normalized unit group of group algebra $FC_2$
+
 OrderNormalizedUnitGroup:=function(p,n)
 local f,g,m,fg,e,q,i1,i2,r,z,s,j,w,v;
-f:=GF(p^n);;
-g:=CyclicGroup(2);;
-m:=MinimalGeneratingSet(g);;
-fg:=GroupRing(f,g);;
-e:=Identity(fg);;
-q:=PrimitiveElement(f);;
-i1:=Embedding(g,fg);;
-i2:=Embedding(f,fg);;
-r:=(q^((Size(f) - 1)));;
-z:=q^((Size(f)-1)/2);;
+
+# Group ring of cyclic group of order 2 over a finite field with p^n elements
+F:=GF(p^n);;
+G:=CyclicGroup(2);;
+FG:=GroupRing(F,G);;
+e:=Identity(FG);;
+i1:=Embedding(G,FG);;
+i2:=Embedding(F,FG);;
+
+# Some magical elements in the finite field
+
+q:=PrimitiveElement(F);;
+# the generator of the cyclic group $F^{*}$
+r:=(q^((Size(F) - 1)));;
+z:=q^((Size(F)-1)/2);;
 s:=r+r ;;
 j:=(r+q)/s ;;
+
+# Generating Set of the group G
+m:=MinimalGeneratingSet(G);;
+
+# The generator of unit group $V(FC_2)$
 w:= (j)^i2 + ((e + (z*j)^(i2))*(m[1]^i1) );;
+
 v:=Order(w);
 return v;
 end;
