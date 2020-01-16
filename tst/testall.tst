@@ -15,4 +15,4 @@
 
 gap> OrderNormalizedUnitGroup(3,3);
 26
-gap> OrderNormalizedUnitGroup(11,7) = (11^7)-1;
+gap> OrderNormalizedUnitGroup(5,3) = (5^3)-1;
