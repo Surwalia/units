@@ -11,7 +11,8 @@
 #'tst/testall.g' file into GAP
 
 
-# First, a single example
+# First, some examples
 
 gap> OrderNormalizedUnitGroup(3,3);
 26
+gap> OrderNormalizedUnitGroup(11,7) = (11^7)-1;
