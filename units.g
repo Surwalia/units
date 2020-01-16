@@ -27,5 +27,5 @@ m:=MinimalGeneratingSet(G);;
 w:= (j)^i2 + ((e + (z*j)^(i2))*(m[1]^i1) );;
 
 v:=Order(w);
-return v;
+return w,v;
 end;
