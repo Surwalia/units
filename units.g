@@ -1,6 +1,6 @@
 # Generator of normalized unit group of group algebra $FC_2$
 
-GeneratorNormalizedUnitGroup(FC2):=function(p,n)
+GeneratorNormalizedUnitGroupFC2:=function(p,n)
 local F,G,m,FG,e,q,i1,i2,r,z,s,j,w,v;
 
 # Group ring of cyclic group of order 2 over a finite field with p^n elements
@@ -28,5 +28,5 @@ m:=MinimalGeneratingSet(G);;
 w:= (j)^i2 + ((e + (z*j)^(i2))*(m[1]^i1) );;
 
 v:=Order(w);;
-return w;
+return [v,w];
 end;
